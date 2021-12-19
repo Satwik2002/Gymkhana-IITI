@@ -1,7 +1,6 @@
 import React from 'react';
 import HeaderProfile from './HeaderProfile';
 import { Card, CardHeader, Typography, Input, Button, CardActions } from '@mui/material';
-import { height } from '@mui/system';
 
 function Profile() {
   return (
