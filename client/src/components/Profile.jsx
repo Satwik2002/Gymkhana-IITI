@@ -1,88 +1,12 @@
 import React from 'react';
-import { Button, Box, Divider, Avatar } from '@mui/material';
-
+import HeaderProfile from './HeaderProfile';
+import { Card, CardHeader, Typography, Input, Button, CardActions } from '@mui/material';
+import { height } from '@mui/system';
 
 function Profile() {
   return (
-    <Box component="div" sx={{ bgcolor: '#E5E5E5' }}>
-      <Button
-        variant="contained"
-        color="primary"
-        style={{
-          position: 'absolute',
-          height: '56px',
-          width: '189px',
-          left: '66px',
-          top: '30px',
-          borderRadius: '10px',
-        }}
-      >
-        Add Section
-      </Button>
-      <Button
-        variant="contained"
-        color="primary"
-        style={{
-          position: 'absolute',
-          height: '56px',
-          width: '189px',
-          left: '625px',
-          top: '23px',
-          borderRadius: '10px',
-        }}
-      >
-        Preview
-      </Button>
-      <Button
-        variant="contained"
-        color="primary"
-        style={{
-          position: 'absolute',
-          height: '55px',
-          width: '189px',
-          left: '860px',
-          top: '25px',
-          borderRadius: '10px',
-        }}
-      >
-        Publish
-      </Button>
-      <Button
-        disabled
-        variant="contained"
-        style={{
-          position: 'absolute',
-          backgroundColor: '#D7D1AC',
-          height: '55px',
-          width: '189px',
-          left: '1095px',
-          top: '23px',
-          borderRadius: '10px',
-        }}
-      >
-        Profile Page
-      </Button>
-      <Avatar
-        src="/client/public/profile.png"
-        style={{
-          position: 'absolute',
-          height: '76px',
-          width: '81px',
-          left: '1330px',
-          top: '14px',
-        }}
-      />
-      <Divider
-        variant="middle"
-        style={{
-          position: 'absolute',
-          width: '1322px',
-          height: '0px',
-          left: '59px',
-          top: '110px',
-          border: '1px solid #000000',
-        }}
-      />
+    <div style={{ backgroundolor: '#E5E5E5' }}>
+      <HeaderProfile />
       <div
         style={{
           position: 'absolute',
@@ -103,7 +27,65 @@ function Profile() {
             top: '18px',
             backgroundColor: '#EFEBD1',
           }}
-        ></div>
+        >
+          <div
+            style={{
+              position: 'absolute',
+              width: '937px',
+              height: '269px',
+              left: '31px',
+              top: '26px',
+              background: '#FEFFD7',
+              border: ' 2px solid #D7D1AC',
+              boxSizing: 'border-box',
+              boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+              borderRadius: '10px',
+            }}
+          >
+            <label> Section 1 Header</label>
+            {/* <div
+              style={{
+                position: "absolute",
+                height: "172px",
+                width: "231px",
+                left: "26px",
+                top: "72px",
+                borderRadius: "10px",
+                backgroundColor: "#D7D1AC"
+              }}
+            >
+
+            </div> */}
+            <Card
+              sx={{
+                maxWidth: '231px',
+                bgcolor: '#D7D1AC',
+                maxHeight: '172px',
+                paddingX: '26px',
+                borderRadius: '10px',
+              }}
+            >
+              <CardHeader>
+                <Typography gutterBottom variant="h5" component="div">
+                  Upload Image
+                </Typography>
+                <CardActions>
+                <label htmlFor="contained-button-file">
+                  <Input
+                    accept="image/*"
+                    id="contained-button-file"
+                    multiple
+                    type="file"
+                  />
+                  <Button variant="contained" component="span">
+                    Upload
+                  </Button>
+                </label>
+                </CardActions>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
         <div
           style={{
             position: 'absolute',
@@ -115,7 +97,7 @@ function Profile() {
           }}
         ></div>
       </div>
-    </Box>
+    </div>
   );
 }
 
